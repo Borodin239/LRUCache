@@ -30,6 +30,7 @@ class LRULinkedList(private val capacity: Int) {
 
         if (isFull()) {
             removed = removeLast()
+            assert(!isFull())
         }
         if (isEmpty()) {
             assert(head == null)
